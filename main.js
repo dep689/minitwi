@@ -13,7 +13,7 @@ class Tweet {
   }
 
   toHTML() {
-    return `<li>${this.name} 「${this.text}」`;
+    return `<li>${this.name} 「${this.text}」</li>`;
   }
 }
 
