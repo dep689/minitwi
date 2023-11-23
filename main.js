@@ -2,6 +2,7 @@ function $(s) {
   return document.querySelector(s);
 }
 
+// Tweet クラスの定義
 class Tweet {
   name;
   text;
@@ -16,18 +17,17 @@ class Tweet {
   }
 }
 
+// ボタンが押された時の処理
 $("#send").addEventListener("click", () => {
-
-  const name = $("#name").value || "匿名"
-  const text = $("#text").value
+  const name = $("#name").value || "匿名";
+  const text = $("#text").value;
 
   // ツイートのインスタンス化
-  const tweet = new Tweet(name, text)
+  const tweet = new Tweet(name, text);
 
   // ツイートからHTMLを生成して追記
-  $("#tweets").innerHTML += tweet.toHTML()
+  $("#tweets").innerHTML += tweet.toHTML();
 
   // 後処理
-  $("#text").value = ""
-
-})
+  $("#text").value = "";
+});
